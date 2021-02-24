@@ -1,3 +1,5 @@
+#[allow(unused_variables)]
+use core::ops::{Neg, AddAssign, Add};
 use std::io::stdin;
 
 enum State{
@@ -6,7 +8,7 @@ enum State{
     Failed
 }
 
-fn main() {
+fn open_safe(){
     let code = String::from("1234");
     let mut state = State::Locked;
     let mut entry = String::new();
@@ -44,5 +46,8 @@ fn main() {
             }
         }
     }
+}
 
+fn main() {    
+    open_safe();    
 }
